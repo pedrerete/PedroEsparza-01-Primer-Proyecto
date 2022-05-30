@@ -1,4 +1,4 @@
-import { Component, Injectable, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Personaje } from '../interfaces/op.interface';
 
 
@@ -9,9 +9,9 @@ import { Personaje } from '../interfaces/op.interface';
 })
 export class MainPageComponent {
 
-  nuevoPersonaje: Personaje={
-    nombre : "",
+  nuevoPersonaje: Personaje = {
+    nombre: "",
     poder: 0
   }
-  
+
 }

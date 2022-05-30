@@ -18,7 +18,7 @@ import { AgregarComponent } from './agregar/agregar.component';
     CommonModule,
     FormsModule
   ],
-  exports:[
+  exports: [
     MainPageComponent
   ]
 })

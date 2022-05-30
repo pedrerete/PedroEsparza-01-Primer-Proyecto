@@ -9,13 +9,12 @@ import { OpService } from '../services/op.services';
 })
 export class AgregarComponent {
 
-//  @Input() personajes: Personaje[] = [];
 
   @Input() nuevo: Personaje = {
     nombre: "",
     poder: 0
   }
-  constructor( private opService: OpService) { }
+  constructor(private opService: OpService) { }
 
 
   agregar() {

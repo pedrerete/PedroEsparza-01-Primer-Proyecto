@@ -1,4 +1,3 @@
-import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { ContadorComponent } from './contador/contador.component';
 
@@ -10,7 +9,7 @@ import { ContadorComponent } from './contador/contador.component';
         ContadorComponent,
     ],
     imports: [
-        
+
     ],
     providers: [],
 })

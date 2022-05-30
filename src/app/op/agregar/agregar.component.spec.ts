@@ -8,9 +8,9 @@ describe('AgregarComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ AgregarComponent ]
+      declarations: [AgregarComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {
