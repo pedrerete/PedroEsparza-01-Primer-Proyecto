@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { Component, Injectable, OnInit } from '@angular/core';
 import { Personaje } from '../interfaces/op.interface';
 
 
@@ -10,34 +9,9 @@ import { Personaje } from '../interfaces/op.interface';
 })
 export class MainPageComponent {
 
-
-
-  ListaPersonajes: Personaje[] = [
-    {
-      nombre: 'Luffy',
-      poder: 10000
-    },
-    {
-      nombre: 'Zoro',
-      poder: 9000
-    },
-    {
-      nombre: 'Sanji',
-      poder: 8000
-    }
-  ]
   nuevoPersonaje: Personaje={
     nombre : "",
     poder: 0
   }
-  agregarNuevoPersonaje(evento:Personaje){
-   
-    let personajeNuevo: Personaje = {
-      nombre: evento.nombre,
-      poder: evento.poder
-    }
-    this.ListaPersonajes.push(personajeNuevo)
-
-    
-  }
+  
 }

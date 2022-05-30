@@ -1,4 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Inject, Input, OnInit } from '@angular/core';
+import { OpService } from '../services/op.services';
 import { Personaje } from '../interfaces/op.interface';
 
 @Component({
@@ -8,6 +9,12 @@ import { Personaje } from '../interfaces/op.interface';
 })
 export class PersonajesComponent   {
 
-  @Input() personajes: Personaje[] = [];
+//  @Input() personajes: Personaje[] = [];
+  get personajes() {
+    return this.opService.ListaPersonajes;
+  }
 
+  constructor( private opService: OpService) { }
+
+  
 }
