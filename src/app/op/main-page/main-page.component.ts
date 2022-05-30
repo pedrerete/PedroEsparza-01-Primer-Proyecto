@@ -26,21 +26,8 @@ export class MainPageComponent {
       poder: 8000
     }
   ]
-  nuevo: Personaje = {
-    nombre: "",
+  nuevo: Personaje={
+    nombre : "",
     poder: 0
-  }
-
-  agregar(){
-    if(this.nuevo.nombre.trim().length === 0){
-      return;
-    }
-     let personajeNuevo: Personaje = {
-       nombre: this.nuevo.nombre,
-       poder: this.nuevo.poder
-     }
-     this.personajes.push(personajeNuevo)
-     this.nuevo.nombre = ""
-     this.nuevo.poder = 0
   }
 }
