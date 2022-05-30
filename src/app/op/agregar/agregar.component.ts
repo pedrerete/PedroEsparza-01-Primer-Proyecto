@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Personaje } from '../interfaces/op.interface';
 
 @Component({
@@ -8,24 +8,21 @@ import { Personaje } from '../interfaces/op.interface';
 })
 export class AgregarComponent {
 
-  @Input() personajes: Personaje[] = [];
+//  @Input() personajes: Personaje[] = [];
 
   @Input() nuevo: Personaje = {
     nombre: "",
     poder: 0
   }
 
+  @Output () nuevoPersonaje: EventEmitter<Personaje> = new EventEmitter();
 
 
   agregar() {
     if (this.nuevo.nombre.trim().length === 0) {
       return;
     }
-    let personajeNuevo: Personaje = {
-      nombre: this.nuevo.nombre,
-      poder: this.nuevo.poder
-    }
-    this.personajes.push(personajeNuevo)
+    this.nuevoPersonaje.emit(this.nuevo);
     this.nuevo.nombre = ""
     this.nuevo.poder = 0
   }

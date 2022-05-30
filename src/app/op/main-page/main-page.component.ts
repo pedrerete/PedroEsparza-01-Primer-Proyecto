@@ -12,7 +12,7 @@ export class MainPageComponent {
 
 
 
-  personajes: Personaje[] = [
+  ListaPersonajes: Personaje[] = [
     {
       nombre: 'Luffy',
       poder: 10000
@@ -26,8 +26,18 @@ export class MainPageComponent {
       poder: 8000
     }
   ]
-  nuevo: Personaje={
+  nuevoPersonaje: Personaje={
     nombre : "",
     poder: 0
+  }
+  agregarNuevoPersonaje(evento:Personaje){
+   
+    let personajeNuevo: Personaje = {
+      nombre: evento.nombre,
+      poder: evento.poder
+    }
+    this.ListaPersonajes.push(personajeNuevo)
+
+    
   }
 }
